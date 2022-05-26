@@ -10,7 +10,6 @@ BST<std::string> makeTree(const char* filename) {
   std::string Single_Word = "";
   std::ifstream file(filename);
   if (!file) throw std::string("File error!");
-  
   while (!file.eof()) {
     char letter = file.get();
     if ((letter >= 'a' && letter <= 'z') || (letter >= 'A' && letter <= 'Z')) {
