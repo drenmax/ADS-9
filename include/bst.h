@@ -59,8 +59,8 @@ class BST {
      }
   }
 
-public:
-  BST() : root(nullptr) {}
+ public:
+  BST(): root(nullptr) {}
 
   void add(T val) {
     root = addNode(root, val);
