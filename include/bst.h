@@ -31,24 +31,25 @@ class BST {
   int searchNode(Node* root, T val) {
     if (root == nullptr) {
       return 0;
-    } else if (root->value == val)
+    } else if (root->value == val) {
       return root->count;
-    else if (root->value > val)
+    } else if (root->value > val) {
       return searchNode(root->left, val);
-    else
+    } else {
       return searchNode(root->right, val);
+    }
   }
 
   int heightTree(Node* root) {
     if (root == nullptr) {
       return 0;
-    }           
+    }
     int L = heightTree(root->left);
     int R = heightTree(root->right);
     return ((L > R) ? L : R)+1;
   }
 
-   void delTree(Node* root) {
+  void delTree(Node* root) {
      if (root == nullptr) {
        return;
      } else {
@@ -56,10 +57,10 @@ class BST {
        delTree(root->right);
        delete root;
      }
-   }
+  }
 
 public:
-  BST() :root(nullptr) {}
+  BST() : root(nullptr) {}
 
   void add(T val) {
     root = addNode(root, val);
